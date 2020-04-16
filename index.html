@@ -76,6 +76,8 @@
         var nine = document.getElementById("9");
         var end = document.getElementById("end");
         var playagain = document.getElementById('playagain');
+
+        // Space values 
         var onespace = "1";
         var twospace = "2";
         var threespace = "3";
@@ -86,9 +88,10 @@
         var eightspace = "8";
         var ninespace = "9";
         
+        // Turn counter
         var turn = 1;
 
-        
+            // Game play
             document.onkeyup = function(event) {
                 if ((event.key==="1") && (turn%2===1) && (onespace==="1") ) {
                     onespace = "X";
@@ -146,9 +149,7 @@
                     turn++;
                 }
 
-                
-                
-
+                // Assigning textContent of vars to new space values
                 one.textContent = onespace;
                 two.textContent = twospace;
                 three.textContent = threespace;
@@ -159,6 +160,7 @@
                 eight.textContent = eightspace;
                 nine.textContent = ninespace;
 
+                // End of game possibilities
                 if ((onespace===twospace && twospace===threespace) || (fourspace===fivespace && fivespace===sixspace) || (sevenspace===eightspace && eightspace===ninespace) || (onespace===fourspace && fourspace===sevenspace) || (twospace===fivespace && fivespace===eightspace) || (threespace===sixspace && sixspace===ninespace) || (onespace===fivespace && fivespace===ninespace) || (threespace===fivespace && fivespace===sevenspace)) {
                     end.textContent="YOU WIN";
                     playagain.textContent="Hit refresh to play again!";
