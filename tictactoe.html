@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Play Tic Tac Toe</h1>
+                    <p>Type a number to pick that square. Turns alternate automatically!</p>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-4 border-right border-bottom border-dark p-1">
+                    <p><span id="1">1</span></p>
+                </div>
+                <div class="col-4 border-right border-bottom border-dark p-1">
+                    <p><span id="2">2</span></p>
+                </div>
+                <div class="col-4 border-bottom border-dark p-1">
+                    <p><span id="3">3</span></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 border-right border-bottom border-dark p-1">
+                    <p><span id="4">4</span></p>
+                </div>
+                <div class="col-4 border-right border-bottom border-dark p-1">
+                    <p><span id="5">5</span></p>
+                </div>
+                <div class="col-4 border-bottom border-dark p-1">
+                    <p><span id="6">6</span></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 border-right border-dark p-1">
+                    <p><span id="7">7</span></p>
+                </div>
+                <div class="col-4 border-right border-dark p-1">
+                    <p><span id="8">8</span></p>
+                </div>
+                <div class="col-4 p-1">
+                    <p><span id="9">9</span></p>
+                </div>
+            </div>
+            <div class="row pt-3">
+                <div class="col-12">
+                    <h3><span id="end"></span></h3>
+                </div>
+            </div>
+            <div class="row pt-3">
+                <div class="col-12">
+                    <p><span id="playagain"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+        // Defining Var to html spans
+        var one = document.getElementById("1");
+        var two = document.getElementById("2");
+        var three = document.getElementById("3");
+        var four = document.getElementById("4");
+        var five = document.getElementById("5");
+        var six = document.getElementById("6");
+        var seven = document.getElementById("7");
+        var eight = document.getElementById("8");
+        var nine = document.getElementById("9");
+        var end = document.getElementById("end");
+        var playagain = document.getElementById('playagain');
+        var onespace = "1";
+        var twospace = "2";
+        var threespace = "3";
+        var fourspace = "4";
+        var fivespace = "5";
+        var sixspace = "6";
+        var sevenspace = "7";
+        var eightspace = "8";
+        var ninespace = "9";
+        
+        var turn = 1;
+
+        
+            document.onkeyup = function(event) {
+                if ((event.key==="1") && (turn%2===1) && (onespace==="1") ) {
+                    onespace = "X";
+                    turn++;
+                }else if (event.key==="2" && turn%2===1 && (twospace==="2")) {
+                    twospace = "X";
+                    turn++;
+                }else if (event.key==="3" && turn%2===1 && (threespace==="3")) {
+                    threespace = "X";
+                    turn++;
+                }else if (event.key==="4" && turn%2===1 && (fourspace==="4")) {
+                    fourspace = "X";
+                    turn++;
+                }else if (event.key==="5" && turn%2===1 && (fivespace==="5")) {
+                    fivespace = "X";
+                    turn++;
+                }else if (event.key==="6" && turn%2===1 && (sixspace==="6")) {
+                    sixspace = "X";
+                    turn++;
+                }else if (event.key==="7" && turn%2===1 && (sevenspace==="7")) {
+                    sevenspace = "X";
+                    turn++;
+                }else if (event.key==="8" && turn%2===1 && (eightspace==="8")) {
+                    eightspace = "X";
+                    turn++;
+                }else if (event.key==="9" && turn%2===1 && (ninespace==="9")) {
+                    ninespace = "X";
+                    turn++;
+                }else if (event.key==="1" && turn%2===0 && (onespace==="1")) {
+                    onespace = "O";
+                    turn++;
+                }else if (event.key==="2" && turn%2===0 && (twospace==="2")) {
+                    twospace = "O";
+                    turn++;
+                }else if (event.key==="3" && turn%2===0 && (threespace==="3")) {
+                    threespace = "O";
+                    turn++;
+                }else if (event.key==="4" && turn%2===0 && (fourspace==="4")) {
+                    fourspace = "O";
+                    turn++;
+                }else if (event.key==="5" && turn%2===0 && (fivespace==="5")) {
+                    fivespace = "O";
+                    turn++;
+                }else if (event.key==="6" && turn%2===0 && (sixspace==="6")) {
+                    sixspace = "O";
+                    turn++;
+                }else if (event.key==="7" && turn%2===0 && (sevenspace==="7")) {
+                    sevenspace = "O";
+                    turn++;
+                }else if (event.key==="8" && turn%2===0 && (eightspace==="8")) {
+                    eightspace = "O";
+                    turn++;
+                }else if (event.key==="9" && turn%2===0 && (ninespace==="9")) {
+                    ninespace = "O";
+                    turn++;
+                }
+
+                
+                
+
+                one.textContent = onespace;
+                two.textContent = twospace;
+                three.textContent = threespace;
+                four.textContent = fourspace;
+                five.textContent = fivespace;
+                six.textContent = sixspace;
+                seven.textContent = sevenspace;
+                eight.textContent = eightspace;
+                nine.textContent = ninespace;
+
+                if ((onespace===twospace && twospace===threespace) || (fourspace===fivespace && fivespace===sixspace) || (sevenspace===eightspace && eightspace===ninespace) || (onespace===fourspace && fourspace===sevenspace) || (twospace===fivespace && fivespace===eightspace) || (threespace===sixspace && sixspace===ninespace) || (onespace===fivespace && fivespace===ninespace) || (threespace===fivespace && fivespace===sevenspace)) {
+                    end.textContent="YOU WIN";
+                    playagain.textContent="Hit refresh to play again!";
+                }else if ((onespace==="X" || onespace==="O") && (twospace==="X" || twospace==="O") && (threespace==="X" || threespace==="O") && (fourspace==="X" || fourspace==="O") && (fivespace==="X" || fivespace==="O") && (sixspace==="X" || sixspace==="O") && (sevenspace==="X" || sevenspace==="O") && (eightspace==="X" || eightspace==="O") && (ninespace==="X" || ninespace==="O")) {
+                    end.textContent="IT'S A TIE";
+                    playagain.textContent="Hit refresh to play again!";
+                    
+                }
+                
+            }
+
+           
+        
+
+       
+
+    </script>
+    
+</body>
+</html>
